@@ -35,6 +35,9 @@ export const useSignup = () => {
         photoURL: imgUrl,
         firstname,
         lastname,
+        city: '',
+        st: '',
+        bio: '',
       })
 
       // dispatch login action
