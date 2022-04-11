@@ -2,6 +2,7 @@ import Sidebar from '../components/Sidebar'
 import RightSidebar from '../components/RightSidebar'
 import { useCollection } from '../hooks/useCollection'
 import PostList from '../components/PostList'
+import CreatePost from '../components/CreatePost'
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
                 <Sidebar />
             </div>
             <div className="col-start-4 col-span-5">
+                <CreatePost />
                 {error && <p classNameName="error">{error}</p>}
                 {posts && <PostList posts={posts} />}
             </div>
