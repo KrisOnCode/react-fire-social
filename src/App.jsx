@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
 import Home from './pages/Home'
+import EditProfile from './pages/EditProfile'
 import LogIn from './pages/LogIn'
 import SignUp from './pages/SignUp'
 import Navbar from './components/Navbar'
@@ -17,6 +18,13 @@ function App() {
               {!user && <Redirect to="/login" />}
               {user && <Home />}
             </Route>
+            <Route path="/edit-profile">
+              {!user && <Redirect to="/login" />}
+              {user && <EditProfile />}
+            </Route>
+
+
+
             <Route path="/login">
               {user && <Redirect to="/" />}
               {!user && <LogIn />}

@@ -4,12 +4,12 @@ import 'firebase/firestore'
 import 'firebase/storage'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBVt1-MsqTBBI9xpUck68W6ujPIBx5xAMU",
-  authDomain: "react-fire-social.firebaseapp.com",
-  projectId: "react-fire-social",
-  storageBucket: "react-fire-social.appspot.com",
-  messagingSenderId: "836149247153",
-  appId: "1:836149247153:web:41b0764878691f8f517690"
+  apiKey: "AIzaSyAjjpIx0o4J5VG3pvXvjR1aEws3mxu-4YE",
+  authDomain: "twister-8dc5f.firebaseapp.com",
+  projectId: "twister-8dc5f",
+  storageBucket: "twister-8dc5f.appspot.com",
+  messagingSenderId: "1054050814842",
+  appId: "1:1054050814842:web:ee577a80bd15fe66ba24c3"
 }
 
 // init firebase

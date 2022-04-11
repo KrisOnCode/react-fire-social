@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'body': ['Quicksand', 'sans-serif'],
-        'heading': ['EB Garamond', 'serif'],
+        'body': ['Playfair Display', 'serif'],
+        'heading': ['Poppins', 'sans-serif'],
       }
     },
   },

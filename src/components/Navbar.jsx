@@ -14,25 +14,25 @@ export default function Navbar() {
         <>
           <nav className="font-heading flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 shadow sm:items-baseline w-full">
                 <div className="mb-2 sm:mb-0">
-                    <a href="/home" className="text-2xl no-underline text-slate-900 dark:text-slate-100">React Fire Social</a>
+                    <a href="/home" className="text-2xl no-underline text-slate-900 dark:text-slate-100 font-heading">React Fire Social</a>
                 </div>
-                <div class="flex items-center space-x-2">
+                <div className="flex items-center space-x-2">
                 {!user && (
                     <>
                         <Link to="/login">
-                            <button class="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50">Log In</button>   
+                            <button className="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading">Log In</button>   
                         </Link>
 
 
                         <Link to="/signup">
-                            <button class="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50">Sign Up</button> 
+                            <button className="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading">Sign Up</button> 
                         </Link>
                     </>
                 )}
                 {user && (
                     <>
                         <Link>
-                            <button class="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50" onClick={logout}>Logout</button> 
+                            <button className="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading" onClick={logout}>Logout</button> 
                         </Link>
                     </>
                 )}
