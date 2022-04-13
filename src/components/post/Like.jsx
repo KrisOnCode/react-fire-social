@@ -34,7 +34,7 @@ export default function Like({post}) {
                     type="submit" c
                     value={newLike}
                     onSubmit={setNewLike}
-                    className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium font-heading rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    className="group relative w-24 ml-6 flex justify-center border border-transparent text-sm font-medium font-heading rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                Like
             </button>
           </form>

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {useCollection} from '../../hooks/useCollection'
 
 
@@ -10,6 +11,7 @@ import {useCollection} from '../../hooks/useCollection'
             
             {documents && documents.map(otherUser => (
             <>
+            <Link to={`/profiles/${otherUser.id}`} key={otherUser.id}>
             <div className="card bg-white dark:bg-slate-900 flex flex-col items-center  p-4 w-96 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl mb-4">
             
             <div className="profile mx-autor  py-2 w-16">
@@ -31,6 +33,7 @@ import {useCollection} from '../../hooks/useCollection'
                 <p>{otherUser.bio}</p>
             </div>
             </div>
+            </Link>
             </>
             ))}
         

@@ -26,13 +26,17 @@ export default function PostList({ posts }) {
                       </div>
                     </div>    
                   </div>
-                    <div className='mb-4'>
+                  <div className="w-full flex justify-between p-2">
+                    <div className="flex">
                       <span className="font-heading">{post.likes.length} Likes</span>
-                      <button className="py-2 px-3 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading">Like</button>
+                      <button className="w-24  rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading ml-6">Like</button>
                     </div>
-                    <div className='mb-4'>
+                    </div>
+                    <div className="w-full flex justify-between p-2">
+                    <div className="flex">
                       <span className="font-heading">{post.comments.length} Comments</span>
-                      <button className="py-2 px-3 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading">Comment</button>
+                      <button className="w-28 rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading ml-6">Comment</button>
+                    </div>
                     </div>
                   {post.comments.length > 0 && post.comments.map(comment => (
                     <>

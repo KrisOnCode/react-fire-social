@@ -7,6 +7,7 @@ import SignUp from './components/auth/SignUp'
 import Navbar from './components/ui/Navbar'
 import Post from './components/post/Post'
 
+
 function App() {
   const { authIsReady, user } = useAuthContext()
   return (
@@ -26,7 +27,8 @@ function App() {
             <Route path="/posts/:id">
                 {!user && <Redirect to="/login" />}
                 {user && <Post />}
-              </Route>
+            </Route>
+
 
 
             <Route path="/login">

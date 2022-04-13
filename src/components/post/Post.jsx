@@ -43,9 +43,11 @@ export default function Post() {
               {post.details}
             </div>
           </div>
-          <div className="mb-4">
+          <div className="w-full flex justify-between p-2">
+            <div className="flex">
           <span className="font-heading">{post.likes.length} Likes</span>
           <Like post={document} />
+          </div>
           </div>
           <div>
           <span className="font-heading">{post.comments.length} Comments</span>
