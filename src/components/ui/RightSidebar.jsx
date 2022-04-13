@@ -1,4 +1,4 @@
-import UserList from './UserList'
+import UserList from '../users/UserList'
 
 export default function RightSidebar() {
             return (     

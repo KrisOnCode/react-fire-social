@@ -1,5 +1,4 @@
-import {useCollection} from '../hooks/useCollection'
-import OnlineIcon from '../assets/OnlineIcon'
+import {useCollection} from '../../hooks/useCollection'
 
 
   export default function UserList() {

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
-import { useAuthContext } from "../hooks/useAuthContext"
-import { useLogout } from '../hooks/useLogout'
-import useDarkMode from '../hooks/useDarkmode';
+import { useAuthContext } from "../../hooks/useAuthContext"
+import { useLogout } from '../../hooks/useLogout'
+import useDarkMode from '../../hooks/useDarkmode';
 import ThemeToggler from './ThemeToggler';
-import MoonIcon from '../assets/MoonIcon'
-import SunIcon from '../assets/SunIcon'
+import MoonIcon from '../../assets/MoonIcon'
+import SunIcon from '../../assets/SunIcon'
 
 export default function Navbar() {
     const [darkMode, setDarkMode] = useDarkMode();
@@ -31,6 +31,12 @@ export default function Navbar() {
                 )}
                 {user && (
                     <>
+                        <Link to="/">
+                            <button className="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading">My Dashboard</button> 
+                        </Link>
+                        <Link to="/edit-profile">
+                            <button className="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading">Edit My Profile</button> 
+                        </Link>
                         <Link>
                             <button className="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading" onClick={logout}>Logout</button> 
                         </Link>

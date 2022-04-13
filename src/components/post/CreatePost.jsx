@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { useCollection } from '../hooks/useCollection'
-import { useAuthContext } from '../hooks/useAuthContext'
-import { timestamp } from '../firebase/config'
-import { useFirestore } from '../hooks/useFirestore'
+import { useCollection } from '../../hooks/useCollection'
+import { useAuthContext } from '../../hooks/useAuthContext'
+import { timestamp } from '../../firebase/config'
+import { useFirestore } from '../../hooks/useFirestore'
 import { useHistory } from 'react-router'
 
 export default function Create() {
@@ -71,4 +71,3 @@ export default function Create() {
     </div>
   )
 }
-

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { useAuthContext } from '../hooks/useAuthContext'
-import { useDocument } from '../hooks/useDocument'
+import { useAuthContext } from '../../hooks/useAuthContext'
+import { useDocument } from '../../hooks/useDocument'
  
 export default function User() {
     const { user } = useAuthContext()
@@ -37,7 +37,7 @@ export default function User() {
             </div>
             <div>
                 <Link to="/edit-profile">
-                    <button class="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading">Edit Profile</button>
+                    <button className="py-2 px-2 w-full rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-gray-50 font-heading">Edit Profile</button>
                 </Link>  
             </div>
         </div>

@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { projectFirestore } from '../firebase/config'
-import { useAuthContext } from '../hooks/useAuthContext'
-import Sidebar from '../components/Sidebar'
-import RightSidebar from '../components/RightSidebar'
+import { projectFirestore } from '../../firebase/config'
+import { useAuthContext } from '../../hooks/useAuthContext'
+import Sidebar from '../ui/Sidebar'
+import RightSidebar from '../ui/RightSidebar'
 
 
 export default function EditProfile() {
@@ -27,8 +27,11 @@ export default function EditProfile() {
 
 
     return (
-        <div className="flex">
-            <Sidebar />
+        <div className="grid grid-cols-12">
+            <div className="col-start-0 col-span-3">
+                <Sidebar />
+            </div>
+            <div className="col-start-4 col-span-5">
             <div className="w-full h-full p-4 m-8 overflow-y-auto">
                 <div className="max-w-md w-full space-y-8">
                     <div>
@@ -93,7 +96,10 @@ export default function EditProfile() {
                         </form>
                 </div>
             </div>
-            <RightSidebar />
+            </div>
+            <div className="col-end-12 col-span-3">
+                <RightSidebar />
+            </div>
         </div>
     )
 }

@@ -1,9 +1,8 @@
-import Sidebar from '../components/Sidebar'
-import RightSidebar from '../components/RightSidebar'
-import { useCollection } from '../hooks/useCollection'
-import PostList from '../components/PostList'
-import CreatePost from '../components/CreatePost'
-
+import { useCollection } from '../../hooks/useCollection'
+import Sidebar from '../ui/Sidebar'
+import RightSidebar from '../ui/RightSidebar'
+import PostList from '../post/PostList'
+import CreatePost from '../post/CreatePost'
 
 export default function Home() {
     const { documents, error } = useCollection('posts')
@@ -14,7 +13,7 @@ export default function Home() {
                 <Sidebar />
             </div>
             <div className="col-start-4 col-span-5">
-                <CreatePost />
+            <CreatePost />
                 {error && <p classNameName="error">{error}</p>}
                 {posts && <PostList posts={posts} />}
             </div>
