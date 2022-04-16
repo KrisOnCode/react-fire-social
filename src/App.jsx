@@ -28,9 +28,6 @@ function App() {
                 {!user && <Redirect to="/login" />}
                 {user && <Post />}
             </Route>
-
-
-
             <Route path="/login">
               {user && <Redirect to="/" />}
               {!user && <LogIn />}

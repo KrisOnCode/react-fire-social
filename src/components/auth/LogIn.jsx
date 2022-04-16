@@ -4,7 +4,7 @@ import { useLogin } from '../../hooks/useLogin'
 export default function LogIn() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const { login } = useLogin()
+    const { login, error, isPending } = useLogin()
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -54,12 +54,11 @@ export default function LogIn() {
               </div>
               
             <div>
-            <button
-                type="submit"
-                className="group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium font-headinf rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full"
-              >
-                Log In
-              </button>
+            {!isPending && <button type="submit"
+                className="group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium font-headinf rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full">Log In</button>}
+            {isPending && <button type="submit"
+                className="group relative flex justify-center py-2 px-4 border border-transparent text-sm font-medium font-headinf rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-full" disabled>loading</button>}
+            {error && <div className="error">{error}</div>}
             </div>
             
              
